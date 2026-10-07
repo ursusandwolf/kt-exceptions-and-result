@@ -23,10 +23,10 @@ class FileService {
 
         return result.fold(
             onSuccess = { content ->
-                TODO("Верни content в верхнем регистре")
+                content.uppercase()
             },
             onFailure = { exception ->
-                TODO("Верни Error: Cannot read file - <EXCEPTION_MESSAGE>")
+                "Error: Cannot read file - ${exception.message}"
             }
         )
     }
