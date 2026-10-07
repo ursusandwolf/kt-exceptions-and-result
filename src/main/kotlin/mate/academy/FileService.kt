@@ -14,7 +14,7 @@ class FileService {
                 )
             }
 
-            file.readText()
+            file.readText().uppercase()
         }
     }
 
@@ -23,7 +23,7 @@ class FileService {
 
         return result.fold(
             onSuccess = { content ->
-                content.uppercase()
+                "Uppercase content:\n$content"
             },
             onFailure = { exception ->
                 "Error: Cannot read file - ${exception.message}"
